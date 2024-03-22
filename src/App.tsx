@@ -40,15 +40,9 @@ function App() {
 
   return (
     <div>
-      {supportsPWA ? 
         <button onClick={() => handleSendNotification()}>
           Installer l'application
         </button>
-      :
-      <div>
-        If you see this it means you can't install PWA try again using chrome
-      </div>
-      }
     </div>
   );
 }
