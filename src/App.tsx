@@ -1,18 +1,24 @@
-// import { SetStateAction, useEffect, useState } from 'react';
 import './App.css'
 
 function App() {
-  // const [supportsPWA, setSupportsPWA] = useState(true);
-  // const [promptInstall, setPromptInstall] = useState(null);
 
 
 
-  
+  function handleInstall(): void {
+    Notification.requestPermission().then(function(permission) {
+      if (permission === 'granted') {
+        new Notification('Installation de l\'application', {
+          body: 'L\'application est en cours d\'installation.'
+        });
+      }
+    });
+  }
+
 
 
   return (
     <div>
-        <button >
+        <button onClick={() => handleInstall()}>
           Installer l'application
         </button>
     </div>
