@@ -31,8 +31,8 @@ export default defineConfig({
         display: "standalone",
         scope: "/",
         start_url: "/",
-        name: "Controller",
-        short_name: "Con",
+        name: "PWA",
+        short_name: "PWA",
         icons: [
           {
             src: "/icon-192x192.png",
